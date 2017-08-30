@@ -1,0 +1,14 @@
+{
+  "name": "do-cli",
+  "version": "1.0.0",
+  "description": "A todo list for terminal",
+  "main": "index.js",
+  "repository": "https://github.com/Paari/do-cli.git",
+  "author": "Paari <0p0a0r0i@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "clear": "^0.0.1",
+    "figlet": "^1.2.0"
+  }
+}
