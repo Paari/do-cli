@@ -12,8 +12,28 @@ console.log(
   )
 )
 
+// CREATE .tasks FILE
 function createFile () {
   touch( '.tasks' );
 }
 
-createFile()
+
+// READ THE FILE
+function readFile () {
+  fs.readFile('.tasks', 'utf8', function(err, data) {
+    console.log(data);
+  });
+}
+
+
+// ADD CONTENT TO THE FILE
+function addContent (newTask) {
+  fs.appendFile('.tasks', newTask, function(err) {
+    if (err) throw err;
+    console.log('updated');
+  });
+}
+
+// createFile();
+readFile();
+addContent('\nUpdated from the function');
