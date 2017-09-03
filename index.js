@@ -21,7 +21,10 @@ function createFile () {
 // READ THE FILE
 function readFile () {
   fs.readFile('.tasks', 'utf8', function(err, data) {
-    console.log(data);
+    var dataFromFile = JSON.parse(data);
+    _.map(dataFromFile, function(task, index) {
+      console.log((index + 1), task.title);
+    });
   });
 }
 
@@ -36,4 +39,4 @@ function addContent (newTask) {
 
 // createFile();
 readFile();
-addContent('\nUpdated from the function');
+// addContent('\nUpdated from the function');
